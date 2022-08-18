@@ -18,6 +18,7 @@ please refer to the final report
 ### Method
 ##### Data Collection & Exploration
 The “Dogs vs. Cats” dataset provided by Kaggle consists of a set of .jpg format raw images including 25,000 training instances with labels and 12,500 testing instance without labels as shown in Figure 1. Both distributes evenly between two classes. The classes are completely mutually exclusive. 
+
 ![image](https://user-images.githubusercontent.com/43327902/185505358-0ed86fcf-8bbb-4fe9-a3d2-6cabf0737e1b.png)
 
 ##### Data Preprocessing
