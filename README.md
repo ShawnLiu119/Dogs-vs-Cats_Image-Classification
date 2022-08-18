@@ -27,6 +27,7 @@ Data normalization is implemented necessarily before the image data is fed into 
 
 ##### Model Construction and Training
 In this study, twelve neural network models have been constructed and experimented with diversified model architectures ranging from fundamental models built up on CNN or DNN layers from scratch and more sophisticated pre-trained models including VGG16 and ResNet50. Additionally, a Generative Adversarial Network (GAN) is explored to testify its discriminator on classification task within this study. A summary of all models covered is illustrated in Figure 2.
+
 ![image](https://user-images.githubusercontent.com/43327902/185505506-8419be32-f318-4e61-9621-c982885f2fa4.png)
 
 Since one of goals of this study is to get better understanding at more granular level on how micro tunning of model architecture would impact the performance, multiple baseline models are developed as benchmark. Two DNN models (Model 1 and 2) are built as referential models to compare with CNN models through Model 3 to 8, which are a series of CNN models with 3 layers convolutional layers as skeleton and applied with different tunning strategy on Dropout layer insertion location and parameters, Optimizer, and Regularization of last Dense layer. For example, Model 4, 5, and 6 experiment with inserting Dropout layer into different location of the model, Model 4 inserts Dropout with 0.3 ratio after the convolution layer only, Model 5 inserts Dropout layer with 0.5 ratio after the dense layer only, while Model inserts Dropout layer after both convolution layer and dense layer. Difference between model architecture has been demonstrated in Figure 3. The dropout ratio for the former is tweaked to 0.1 to maximumly reserve the information extracted from previous convolution layer but at the same reduce some overfitting factors.
@@ -37,6 +38,7 @@ Model 10 and 11 explore pre-trained model structures including VGG16 and ResNet5
 
 ##### Result
 Experimental models are evaluated with performance metrics being traced, including accuracy, F1 score, recall, precision and computing time, as summarized in Figure 3.
+
 ![image](https://user-images.githubusercontent.com/43327902/185505634-13c87f4a-4bd8-4514-a22f-e90d8c745348.png)
 
 As expected, CNN models outperform DNN models on image classification tasks as all other CNN models achieved above 70% accuracy in validation phase, while DNN models (Model 1 and 2) achieved 59.22% and 60.24% accuracy only.
